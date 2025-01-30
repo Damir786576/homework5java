@@ -28,7 +28,6 @@ public class EmployeeServiceImpl implements EmployeeServiceSalary {
 
     }
 
-    @Override
     public Employee add(String firstName, String lastName, int department, int salary) {
         Employee employee = new Employee(firstName, lastName, department, salary);
         if (employeeBook.containsKey(employee.getFullName())) {
@@ -38,7 +37,6 @@ public class EmployeeServiceImpl implements EmployeeServiceSalary {
         return employee;
     }
 
-    @Override
     public Employee remove(String firstName, String lastName, int department, int salary) {
         Employee employee = new Employee(firstName, lastName, department, salary);
         if (employeeBook.containsKey(employee.getFullName())) {
@@ -47,7 +45,6 @@ public class EmployeeServiceImpl implements EmployeeServiceSalary {
         throw new EmployeeNotFoundException();
     }
 
-    @Override
     public Employee find(String firstName, String lastName, int department, int salary) {
         Employee employee = new Employee(firstName, lastName, department, salary);
         if (employeeBook.containsKey(employee.getFullName())) {
@@ -58,7 +55,6 @@ public class EmployeeServiceImpl implements EmployeeServiceSalary {
     }
 
 
-    @Override
     public Collection<Employee> getEmployees() {
         return Collections.unmodifiableCollection(employeeBook.values());
     }

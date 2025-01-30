@@ -6,11 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface DepartmentService {
-    Employee findMaxSalaryDepartment(int department);
-
-    Employee findMinSalaryDepartment(int department);
-
-    List<Employee> allEmployeeDepartment(int department);
 
     Employee findMaxSalaryEmployeeByDepartment(int department);
 

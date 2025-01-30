@@ -23,21 +23,6 @@ public class EmployeeServiceSalary implements DepartmentService {
     }
 
     @Override
-    public Employee findMaxSalaryDepartment(int department) {
-        return null;
-    }
-
-    @Override
-    public Employee findMinSalaryDepartment(int department) {
-        return null;
-    }
-
-    @Override
-    public List<Employee> allEmployeeDepartment(int department) {
-        return List.of();
-    }
-
-    @Override
     public Employee findMaxSalaryEmployeeByDepartment(int department) {
         return employeeService.getEmployeeMap().values().stream()
                 .filter(employee -> employee.getDepartment() == department)
